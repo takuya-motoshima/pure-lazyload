@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Basic lazy loading example</title>
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      padding: 0;
+      background: #000;
+    }
+
+      img {
+        display: block;
+        margin: 30px auto;
+        width: 470px;
+        height: 354px;
+        object-fit: cover;
+      }
+  </style>
+</head>
+<body>
+  <img data-src="images/1.jpg">
+  <img data-src="images/2.jpg">
+  <img data-src="images/3.jpg">
+  <img data-src="images/4.jpg">
+  <img data-src="images/5.jpg">
+  <img data-src="images/6.jpg">
+  <img data-src="images/7.jpg">
+  <img data-src="images/8.jpg">
+  <img data-src="images/9.jpg">
+  <img data-src="images/10.jpg">
+  <img data-src="images/11.jpg">
+  <img data-src="images/12.jpg">
+  <img data-src="images/13.jpg">
+  <img data-src="images/14.jpg">
+  <img data-src="images/15.jpg">
+  <img data-src="images/16.jpg">
+  <img data-src="images/17.jpg">
+  <img data-src="images/18.jpg">
+  <img data-src="images/19.jpg">
+  <img data-src="images/20.jpg">
+  <img data-src="images/21.jpg">
+
+  <script type="module">
+    import LazyLoad from '../dist/build.esm.js';
+
+    // Lazy loading.
+    LazyLoad.load(document.querySelectorAll('img'), {
+      debugging: true
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Lazy loading example of gallery</title>
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      padding: 0;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="gallery" class="lz-gallery">
+    <figure class="lz-gallery-item"><img data-src="images/1.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/2.jpg"></figure>
+    <figure class="lz-gallery-item lz-gallery-item-big"><img data-src="images/3.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/4.jpg"></figure>
+    <figure class="lz-gallery-item lz-gallery-item-big"><img data-src="images/5.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/6.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/7.jpg"></figure>
+    <figure class="lz-gallery-item lz-gallery-item-horizontal"><img data-src="images/8.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/9.jpg"></figure>
+    <figure class="lz-gallery-item lz-gallery-item-horizontal"><img data-src="images/10.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/11.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/12.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/13.jpg"></figure>
+    <figure class="lz-gallery-item lz-gallery-item-horizontal"><img data-src="images/14.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/15.jpg"></figure>
+    <figure class="lz-gallery-item lz-gallery-item-big"><img data-src="images/16.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/17.jpg"></figure>
+    <figure class="lz-gallery-item lz-gallery-item-vertical"><img data-src="images/18.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/19.jpg"></figure>
+    <figure class="lz-gallery-item"><img data-src="images/20.jpg"></figure>
+    <figure class="lz-gallery-item lz-gallery-item-vertical"><img data-src="images/21.jpg"></figure>
+  </div>
+
+  <script type="module">
+    import LazyLoad from '../dist/build.esm.js';
+
+    // Lazy loading.
+    LazyLoad.load(document.querySelectorAll('img'), {
+      debugging: true
+    })
+  </script>
+</body>
+</html>
