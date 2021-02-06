@@ -12,6 +12,7 @@
     body {
       padding: 0;
       background: #000;
+      color: #fff;
     }
 
       img {
@@ -21,36 +22,50 @@
         height: 354px;
         object-fit: cover;
       }
+      
+      h1 {
+        font-size: 2em;
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
   </style>
 </head>
 <body>
-  <img data-src="images/1.jpg">
-  <img data-src="images/2.jpg">
-  <img data-src="images/3.jpg">
-  <img data-src="images/4.jpg">
-  <img data-src="images/5.jpg">
-  <img data-src="images/6.jpg">
-  <img data-src="images/7.jpg">
-  <img data-src="images/8.jpg">
-  <img data-src="images/9.jpg">
-  <img data-src="images/10.jpg">
-  <img data-src="images/11.jpg">
-  <img data-src="images/12.jpg">
-  <img data-src="images/13.jpg">
-  <img data-src="images/14.jpg">
-  <img data-src="images/15.jpg">
-  <img data-src="images/16.jpg">
-  <img data-src="images/17.jpg">
-  <img data-src="images/18.jpg">
-  <img data-src="images/19.jpg">
-  <img data-src="images/20.jpg">
-  <img data-src="images/21.jpg">
+
+  <h1>pure-lazyload - Image lazy loading library with loading icon</h1>
+
+  <img data-src="images/1.jpg"><h2>EXAMPLE 1</h2>
+  <img data-src="images/2.jpg"><h2>EXAMPLE 2</h2>
+  <img data-src="images/3.jpg"><h2>EXAMPLE 3</h2>
+  <img data-src="images/4.jpg"><h2>EXAMPLE 4</h2>
+  <img data-src="images/5.jpg"><h2>EXAMPLE 5</h2>
+  <img data-src="images/6.jpg"><h2>EXAMPLE 6</h2>
+  <img data-src="images/7.jpg"><h2>EXAMPLE 7</h2>
+  <img data-src="images/8.jpg"><h2>EXAMPLE 8</h2>
+  <img data-src="images/9.jpg"><h2>EXAMPLE 9</h2>
+  <img data-src="images/10.jpg"><h2>EXAMPLE 10</h2>
+  <img data-src="images/11.jpg"><h2>EXAMPLE 11</h2>
+  <img data-src="images/12.jpg"><h2>EXAMPLE 12</h2>
+  <img data-src="images/13.jpg"><h2>EXAMPLE 13</h2>
+  <img data-src="images/14.jpg"><h2>EXAMPLE 14</h2>
+  <img data-src="images/15.jpg"><h2>EXAMPLE 15</h2>
+  <img data-src="images/16.jpg"><h2>EXAMPLE 16</h2>
+  <img data-src="images/17.jpg"><h2>EXAMPLE 17</h2>
+  <img data-src="images/18.jpg"><h2>EXAMPLE 18</h2>
+  <img data-src="images/19.jpg"><h2>EXAMPLE 19</h2>
+  <img data-src="images/20.jpg"><h2>EXAMPLE 20</h2>
+  <img data-src="images/21.jpg"><h2>EXAMPLE 21</h2>
+  <img data-src="images/22.jpg"><h2>EXAMPLE 22</h2>
+  <img data-src="images/23.jpg"><h2>EXAMPLE 23</h2>
 
   <script type="module">
-    import LazyLoad from '../dist/build.esm.js';
+    import Lazyload from '../dist/build.esm.js';
 
     // Lazy loading.
-    LazyLoad.load(document.querySelectorAll('img'), {
+    Lazyload.observe(document.querySelectorAll('img'), {
       debugging: true
     })
   </script>

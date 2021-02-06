@@ -3,7 +3,7 @@ export default class {
     /**
      * Monitor if the target element is in the visible area.
      */
-    private static observer;
+    private static io;
     /**
      * Debug mode.
      */
@@ -15,7 +15,7 @@ export default class {
      * @param {{ root?: null|HTMLElement, rootMargin?: string, background?: string }} options
      * @return {void}
      */
-    static load(imgs: HTMLImageElement[], options?: {
+    static observe(imgs: HTMLImageElement[], options?: {
         root?: null | HTMLElement;
         rootMargin?: string;
         background?: string;

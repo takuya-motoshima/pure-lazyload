@@ -12,10 +12,18 @@
     body {
       padding: 0;
       background: #000;
+      color: #fff;
     }
+
+      h1 {
+        font-size: 2em;
+        text-align: center;
+      }
   </style>
 </head>
 <body>
+
+  <h1>pure-lazyload - Image lazy loading library with loading icon</h1>
 
   <div id="gallery" class="lz-gallery">
     <figure class="lz-gallery-item"><img data-src="images/1.jpg"></figure>
@@ -39,13 +47,16 @@
     <figure class="lz-gallery-item"><img data-src="images/19.jpg"></figure>
     <figure class="lz-gallery-item"><img data-src="images/20.jpg"></figure>
     <figure class="lz-gallery-item lz-gallery-item-vertical"><img data-src="images/21.jpg"></figure>
+    <figure class="lz-gallery-item lz-gallery-item-big"><img data-src="images/22.jpg"></figure>
+    <figure class="lz-gallery-item lz-gallery-item-horizontal"><img data-src="images/23.jpg"></figure>
+
   </div>
 
   <script type="module">
-    import LazyLoad from '../dist/build.esm.js';
+    import Lazyload from '../dist/build.esm.js';
 
     // Lazy loading.
-    LazyLoad.load(document.querySelectorAll('img'), {
+    Lazyload.observe(document.querySelectorAll('img'), {
       debugging: true
     })
   </script>
