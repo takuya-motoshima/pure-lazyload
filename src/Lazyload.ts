@@ -55,6 +55,7 @@ export default class {
           let src = img.getAttribute('data-src');
           if (!src) return;
           img.setAttribute('src', src);
+          img.removeAttribute('data-src');
 
           // Remove the wrap element when you have finished loading the image
           ((img) => {
