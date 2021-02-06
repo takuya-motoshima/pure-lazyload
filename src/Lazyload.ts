@@ -23,14 +23,16 @@ export default class {
     root?: null|HTMLElement,
     rootMargin?: string,
     background?: string,
-    debugging?: boolean
+    debugging?: boolean,
+    spinnerSize?: 'default'|'lg'|'2x'
   }): void {
     // Initialize options
     options = Object.assign({
       root: null,
       rootMargin: '0px',
       background: 'random',
-      debugging: false
+      debugging: false,
+      spinnerSize: 'default'
     }, options||{});
 
     // Returns a warning if IntersectionObserver is not supported.
@@ -57,10 +59,11 @@ export default class {
           img.setAttribute('src', src);
           img.removeAttribute('data-src');
 
-          // Remove the wrap element when you have finished loading the image
           ((img) => {
             img.addEventListener('load', () => {
               this.debug(`Loaded image ${img.getAttribute('src')}`);
+
+              // Remove the wrap element when you have finished loading the image
               const wrap: HTMLElement = img.parentNode as HTMLElement;
               const parent: HTMLElement = wrap.parentNode as HTMLElement;
               parent.insertBefore(img, wrap);
@@ -128,6 +131,8 @@ export default class {
       // Make a loading icon.
       const spinner = document.createElement('div');
       spinner.classList.add('lz-spinner');
+      if (options.spinnerSize === 'lg') spinner.classList.add('lz-spinner-lg');
+      else if (options.spinnerSize === '2x') spinner.classList.add('lz-spinner-2x');
       spinner.style.zIndex = '2';
 
       // Wrap the image in a wrap element.

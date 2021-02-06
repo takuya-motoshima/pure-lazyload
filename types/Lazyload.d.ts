@@ -20,6 +20,7 @@ export default class {
         rootMargin?: string;
         background?: string;
         debugging?: boolean;
+        spinnerSize?: 'default' | 'lg' | '2x';
     }): void;
     /**
      * Remove target element monitoring for lazy loading.

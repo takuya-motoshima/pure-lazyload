@@ -1,6 +1,9 @@
 # pure-lazyload
 
 This is an image lazy loading library with a loading icon.  
+
+![title.png](https://raw.githubusercontent.com/takuya-motoshima/pure-lazyload/master/screencap/title.png)
+
 This library works with the following browsers that support Intersection Observer.  
 
 ![intersection-observer-support-browser.png](https://raw.githubusercontent.com/takuya-motoshima/pure-lazyload/master/screencap/intersection-observer-support-browser.png)

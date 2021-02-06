@@ -16,9 +16,10 @@ Lazyload.observe(
         root?: null|HTMLElement,
         rootMargin?: string,
         background?: string,
-        debugging?: boolean
+        debugging?: boolean,
+        spinnerSize?: 'default'|'lg'|'2x'
     }
-): void 
+): void
 ```
 
 ###### Parameters
@@ -44,7 +45,49 @@ Lazyload.observe(
             <td>debugging</td>
             <td>Debug mode.<br>If true, library debug messages will be displayed on the console.<br>The default is fale (off).</td>
         </tr>
+        <tr>
+            <td>spinnerSize</td>
+            <td>The size of the loading icon.<br>default is 16px, lg is 24px, and 2x is 32px.<br>The default is 16px.</td>
+        </tr>
     </table>
+
+## Example
+
+HTML:  
+
+```html
+<img data-src="images/1.jpg">
+<img data-src="images/2.jpg">
+<img data-src="images/3.jpg">
+<img data-src="images/4.jpg">
+<img data-src="images/5.jpg">
+<img data-src="images/6.jpg">
+<img data-src="images/7.jpg">
+<img data-src="images/8.jpg">
+<img data-src="images/9.jpg">
+<img data-src="images/10.jpg">
+<img data-src="images/11.jpg">
+<img data-src="images/12.jpg">
+<img data-src="images/13.jpg">
+<img data-src="images/14.jpg">
+<img data-src="images/15.jpg">
+<img data-src="images/16.jpg">
+<img data-src="images/17.jpg">
+<img data-src="images/18.jpg">
+<img data-src="images/19.jpg">
+<img data-src="images/20.jpg">
+<img data-src="images/21.jpg">
+<img data-src="images/22.jpg">
+<img data-src="images/23.jpg">
+```
+
+JS:  
+```js
+import Lazyload from 'pure-lazyload';
+
+// Lazy loading.
+Lazyload.observe(document.querySelectorAll('img'));
+````
 
 # Gallery-style CSS class
 
@@ -113,4 +156,3 @@ By using this CSS class, you can easily use the gallery image.
     </figure>
 </div>
 ```
-
